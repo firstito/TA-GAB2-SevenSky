@@ -9,7 +9,7 @@ class Mpegawai extends CI_Model {
 	// }
     function get_data()
     {
-        $this->db->select("id AS id_pgwai, nik AS nik_pgwai, nama AS nama_pgwai, telepon AS telepon_pgwai, alamat AS alamat_pgwai");
+        $this->db->select("id AS id_pgw, nik AS nik_pgw, nama AS nama_pgw, telepon AS telepon_pgw, alamat AS alamat_pgw");
         $this->db->from("tb_pegawai");
         $this->db->order_by("nik", "ASC");
         $query = $this->db->get()->result();

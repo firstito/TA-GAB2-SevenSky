@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- import file "style.css" -->
-    <link rel="stylesheet" href="<?php echo base_url("ext/style.css") ?>"/>
-
+    <link rel="stylesheet" href="<?= base_url('ext/style.css'); ?>"/>
 
 </head>
 <body>
@@ -19,7 +18,6 @@
     <nav class="area-menu">
         <button id="btn_tambah" class="btn-primary">Add Data</button>
         <button id="btn_refresh" class="btn-secondary" onclick="return setRefresh()">Refresh Data</button>
-
     </nav>
 
     <!-- buat area table -->
@@ -32,7 +30,7 @@
                 <th style="width: 10%";>NIK</th>
                 <th style="width: 50%";>Nama</th>
                 <th style="width: 15%";>Telepon</th>
-                <th style="width: 10%";>ALAMAT</th>
+                <th style="width: 10%";>Alamat</th>
             </tr>
         </thead>
 
@@ -95,7 +93,7 @@
 
         function setRefresh()
         {
-            location.href='<?php echo base_url() ?>';
+            location.href='<?php echo base_url('/index.php/Pegawai') ?>';
         }
 
         // buat fungsi untuk ke halaman update
