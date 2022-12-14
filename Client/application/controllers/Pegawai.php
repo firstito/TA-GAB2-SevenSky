@@ -27,7 +27,7 @@ class Pegawai extends CI_Controller {
 		// isi nilai err
 		// $err = 1;
 
-		// kiirm hasil ke "vw_mahasiswa"
+		// kiirm hasil ke "vw_pegawai"
 		echo json_encode(array("statusnya" => $delete->status));
     }
 
@@ -49,7 +49,7 @@ class Pegawai extends CI_Controller {
 		);
 		$save = json_decode($this->client->simple_post(APIPEGAWAI, $data));
 
-		// kiirm hasil ke "vw_mahasiswa"
+		// kiirm hasil ke "vw_pegawai"
 		echo json_encode(array("statusnya" => $save->status));
 		
 	}

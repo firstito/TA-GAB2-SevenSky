@@ -1,9 +1,15 @@
 :root
 {
-    --th_table : #e3e3e3;
+    --th_table : #119fd3;
     --set_padding : 10px;
     --set_border : 1px solid #333333;
     --putih : #FFFFFF;
+}
+
+.judul{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
 }
 
 table
@@ -81,7 +87,7 @@ th, td
     width: 48%;
     margin-right: 2px;
     border-radius: var(--set_padding);
-    background: #EB6440;
+    background: #f0c91c;
     color: FFFFFF;
     border: var(--set_border);
     height: 40px;
@@ -94,7 +100,7 @@ th, td
     width: 48%;
     margin-right: 2px;
     border-radius: var(--set_padding);
-    background: #FFFFFF;
+    background: #dd3939;
     color: #333333;
     border: var(--set_border);
     height: 40px;

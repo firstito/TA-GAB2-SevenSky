@@ -14,6 +14,10 @@
 
 </head>
 <body>
+<div  class="judul">
+        <p>Data Pegawai</p>
+    </div>
+
     <!-- BUAT AREA MENU -->
     <nav class="area-menu">
         <button id="btn_tambah" class="btn-primary">Add Data</button>
@@ -25,12 +29,13 @@
         <thead>
             <tr>
                 <!-- judul tabel -->
-                <th style="width: 10%";>Aksi</th>
-                <th style="width: 5%";>No.</th>
+                <th style="width: 5%";>No</th>
                 <th style="width: 10%";>NIK</th>
-                <th style="width: 50%";>Nama</th>
+                <th style="width: 50%";>Nama Pegawai</th>
                 <th style="width: 15%";>Telepon</th>
                 <th style="width: 10%";>Alamat</th>
+                <th style="width: 10%";>Aksi</th>
+
             </tr>
         </thead>
 
@@ -43,16 +48,18 @@
                     foreach($tampil->pegawai as $result) {
                 ?>
                 <tr>
-                    <td style="text-align: center;"> <nav class="area-aksi">
-                        <button class="btn-ubah" id="btn_ubah" title="Ubah Data" Onclick="return gotoUpdate('<?php echo $result->nik_pgw; ?>')"><i class="fa-regular fa-pen-to-square"></i></button>
 
-                        <button class="btn-hapus" id="btn_hapus" title="Hapus Data" Onclick="return gotoDelete('<?php echo $result->nik_pgw; ?>')"> <i class="fa-solid fa-trash-can"></i></button>
-                    </nav></td>
                     <td style="text-align: center;"> <?php echo $no; ?></td>
                     <td style="text-align: center;"> <?php echo $result->nik_pgw; ?></td>
                     <td style="text-align: justify;"> <?php echo $result->nama_pgw; ?></td>
                     <td style="text-align: center;"> <?php echo $result->telepon_pgw; ?></td>
                     <td style="text-align: center;"> <?php echo $result->alamat_pgw; ?></td>
+
+                    <td style="text-align: center;"> <nav class="area-aksi">
+                        <button class="btn-ubah" id="btn_ubah" title="Ubah Data" Onclick="return gotoUpdate('<?php echo $result->nik_pgw; ?>')"><i class="fa-regular fa-pen-to-square"></i></button>
+
+                        <button class="btn-hapus" id="btn_hapus" title="Hapus Data" Onclick="return gotoDelete('<?php echo $result->nik_pgw; ?>')"> <i class="fa-solid fa-trash-can"></i></button>
+                    </nav></td>
                 </tr>
 
                 <?php
@@ -83,7 +90,7 @@
             // this.innerHTML = <strong>Tambah Data</strong>;
             // this.innerText = "Tambah Data";
 
-            // alihkan ke halaman/Controller(Mahasiswa) fungsi "addMahasiswa"
+            // alihkan ke halaman/Controller(pegawai) fungsi "addPegawai"
             
             location.href='<?php echo site_url("Pegawai/addPegawai")?>'
             
@@ -99,8 +106,8 @@
         // buat fungsi untuk ke halaman update
         function gotoUpdate(nik)
         {
-            //  npmx = "ÛMõÛM;";
-            // let npmx = atob(npm);
+            //  nikx = "ÛMõÛM;";
+            // let nikx = atob(nik);
             location.href='<?php echo site_url("Pegawai/updatePegawai") ?>'+'/'+nik
         }
         
