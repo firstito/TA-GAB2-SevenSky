@@ -9,7 +9,7 @@ class Mpegawai extends CI_Model {
 	// }
     function get_data()
     {
-        $this->db->select("id AS id_pgwai, nik AS nik_pgwai, nama AS nama_pgwai, telepon AS telepon_pgwai, alamat AS alamat_pgwai");
+        $this->db->select("id AS id_pgw, nik AS nik_pgw, nama AS nama_pgw, telepon AS telepon_pgw, alamat AS alamat_pgw");
         $this->db->from("tb_pegawai");
         $this->db->order_by("nik", "ASC");
         $query = $this->db->get()->result();
@@ -20,14 +20,14 @@ class Mpegawai extends CI_Model {
     // buat fungsi untuk save data
     function save_data($nik, $nama, $telepon, $alamat, $token)
     {
-         // cek apakah npm ada atau tidak
+         // cek apakah nik ada atau tidak
          $this->db->select("nik");
          $this->db->from("tb_pegawai");
          $this->db->where("TO_BASE64(nik) = '$token'");
         //  $this->db->where("nik = '$nik'");
          // eksekusi query
          $query = $this->db->get()->result();
-         // jika npm tidak ditemukan
+         // jika nik tidak ditemukan
          if(count($query) == 0)
          {
             // isi nilai untuk masing" filed
@@ -56,14 +56,14 @@ class Mpegawai extends CI_Model {
     // fungsi untuk update data
     function update_data($nik, $nama, $telepon, $alamat, $token)
     {
-             // cek apakah npm ada atau tidak
+             // cek apakah nik ada atau tidak
              $this->db->select("nik");
              $this->db->from("tb_pegawai");
              $this->db->where("TO_BASE64(nik) != '$token' AND nik = '$nik'");
             //  $this->db->where("nik = '$nik'");
              // eksekusi query
              $query = $this->db->get()->result();
-             // jika npm tidak ditemukan
+             // jika nik tidak ditemukan
              if(count($query) == 0)
              {
                  // isi nilai untuk masing" filed
@@ -83,7 +83,7 @@ class Mpegawai extends CI_Model {
 
 
              }
-            //  jika npm di temukan
+            //  jika nik di temukan
             else
             {
                 $hasil =1;
@@ -110,7 +110,7 @@ class Mpegawai extends CI_Model {
                 // kirim nilai hasil = 1
                 $hasil = 1;
             }
-            // jika npm tidak di temukan
+            // jika nik tidak di temukan
             else
             {
                 // kirim nilai hasil =0

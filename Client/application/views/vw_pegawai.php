@@ -32,7 +32,7 @@
                 <th style="width: 10%";>NIK</th>
                 <th style="width: 50%";>Nama</th>
                 <th style="width: 15%";>Telepon</th>
-                <th style="width: 10%";>ALAMAT</th>
+                <th style="width: 10%";>Alamat</th>
             </tr>
         </thead>
 
@@ -95,14 +95,14 @@
 
         function setRefresh()
         {
-            location.href='<?php echo base_url() ?>';
+            location.href='<?php echo base_url('/index.php/Pegawai') ?>';
         }
 
         // buat fungsi untuk ke halaman update
         function gotoUpdate(nik)
         {
-            //  npmx = "ÛMõÛM;";
-            // let npmx = atob(npm);
+            //  nikx = "ÛMõÛM;";
+            // let nikx = atob(nik);
             location.href='<?php echo site_url("Pegawai/updatePegawai") ?>'+'/'+nik
         }
         

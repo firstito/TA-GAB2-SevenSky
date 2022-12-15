@@ -85,7 +85,7 @@ class Pegawai extends Server {
     {
         // // panggil model "Mpegawai"
         // $this->load->model("Mpegawai","pgw",TRUE);
-        // ambil parameter token "npm"
+        // ambil parameter token "nik"
         $token = $this->delete("nik");
         //    panggil fungsi "delete_data"
         $hasil = $this->pgw->delete_data(base64_encode($token));

@@ -84,6 +84,3 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 
-// custom constant (Konstanta)
-define("API","http://localhost/TA-GAB2-SevenSky/Server");
-define("APIPEGAWAI",API."/index.php/Pegawai");
