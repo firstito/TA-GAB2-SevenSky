@@ -74,7 +74,7 @@ class Mpegawai extends CI_Model {
                 "alamat" => $alamat,
             );
 
-            // hapus data mahasiswa
+            // hapus data pegawai
             $this->db->where("TO_BASE64(nik) = '$token'");
             $this->db->update("tb_pegawai", $data);
             // kirim nilai hasil = 0
